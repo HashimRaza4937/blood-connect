@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: blood-connect-api
+    env: node
+    region: singapore
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: JWT_SECRET
+        value: bloodconnect_contest_demo_secret_2026_supersecure
+      - key: CORS_ORIGIN
+        value: "*"

@@ -1,0 +1,11 @@
+{
+  "name": "blood-connect",
+  "version": "1.0.0",
+  "description": "Smart Blood Availability, Free Donation & Blood Bank Management Platform (Ghotki, Sindh)",
+  "private": true,
+  "scripts": {
+    "start:server": "cd server && npm start",
+    "start:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build"
+  }
+}
