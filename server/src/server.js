@@ -61,8 +61,8 @@ app.use((err, req, res, next) => {
 });
 
 // Start Server
-const PORT = config.port;
-app.listen(PORT, () => {
+const PORT = process.env.PORT || config.port || 5000;
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`=======================================================`);
   console.log(`🩸 BLOOD CONNECT BACKEND API RUNNING ON PORT ${PORT}`);
   console.log(`📍 Initial Target Location: Ghotki, Sindh, Pakistan`);

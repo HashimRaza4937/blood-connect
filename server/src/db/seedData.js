@@ -1,17 +1,15 @@
 import bcrypt from 'bcryptjs';
 
 export const getInitialData = () => {
-  const hashedPasswordAdmin = bcrypt.hashSync('admin123', 8);
-  const hashedPasswordBank = bcrypt.hashSync('bank123', 8);
-  const hashedPasswordDonor = bcrypt.hashSync('donor123', 8);
-  const hashedPasswordRecipient = bcrypt.hashSync('recipient123', 8);
+  // All demo accounts use password: demo1234
+  const hashedDemo = bcrypt.hashSync('demo1234', 8);
 
   const users = [
     {
       _id: 'usr_admin_01',
       name: 'Prof. Tariq Mahar (Admin)',
-      email: 'admin@bloodconnect.pk',
-      password: hashedPasswordAdmin,
+      email: 'admin@demo.com',
+      password: hashedDemo,
       role: 'admin',
       phone: '+92 300 0000001',
       city: 'Ghotki',
@@ -20,8 +18,8 @@ export const getInitialData = () => {
     {
       _id: 'usr_bank_01',
       name: 'Dr. Asif Ali Channa (Lab Director)',
-      email: 'ghotki.central@bloodconnect.pk',
-      password: hashedPasswordBank,
+      email: 'bank@demo.com',
+      password: hashedDemo,
       role: 'bloodbank',
       phone: '+92 300 1234567',
       city: 'Ghotki',
@@ -32,7 +30,7 @@ export const getInitialData = () => {
       _id: 'usr_bank_02',
       name: 'Dr. Noman Shaikh',
       email: 'citycare@bloodconnect.pk',
-      password: hashedPasswordBank,
+      password: hashedDemo,
       role: 'bloodbank',
       phone: '+92 301 2345678',
       city: 'Mirpur Mathelo',
@@ -42,8 +40,8 @@ export const getInitialData = () => {
     {
       _id: 'usr_donor_01',
       name: 'Muhammad Bilal Kalhoro',
-      email: 'donor.o@bloodconnect.pk',
-      password: hashedPasswordDonor,
+      email: 'donor@demo.com',
+      password: hashedDemo,
       role: 'donor',
       phone: '+92 300 7654321',
       city: 'Ghotki',
@@ -58,7 +56,7 @@ export const getInitialData = () => {
       _id: 'usr_donor_02',
       name: 'Kashif Ahmed Lund',
       email: 'donor.b@bloodconnect.pk',
-      password: hashedPasswordDonor,
+      password: hashedDemo,
       role: 'donor',
       phone: '+92 301 8765432',
       city: 'Ghotki',
@@ -73,7 +71,7 @@ export const getInitialData = () => {
       _id: 'usr_donor_03',
       name: 'Farhan Qureshi',
       email: 'donor.a@bloodconnect.pk',
-      password: hashedPasswordDonor,
+      password: hashedDemo,
       role: 'donor',
       phone: '+92 302 9876543',
       city: 'Mirpur Mathelo',
@@ -88,7 +86,7 @@ export const getInitialData = () => {
       _id: 'usr_donor_04',
       name: 'Zeeshan Shah',
       email: 'donor.ab@bloodconnect.pk',
-      password: hashedPasswordDonor,
+      password: hashedDemo,
       role: 'donor',
       phone: '+92 303 1239876',
       city: 'Daharki',
@@ -102,8 +100,8 @@ export const getInitialData = () => {
     {
       _id: 'usr_recipient_01',
       name: 'Abdul Wahid Jamali',
-      email: 'recipient1@bloodconnect.pk',
-      password: hashedPasswordRecipient,
+      email: 'recipient@demo.com',
+      password: hashedDemo,
       role: 'recipient',
       phone: '+92 304 5551212',
       city: 'Ghotki',
@@ -114,7 +112,7 @@ export const getInitialData = () => {
       _id: 'usr_recipient_02',
       name: 'Saima Parveen',
       email: 'recipient2@bloodconnect.pk',
-      password: hashedPasswordRecipient,
+      password: hashedDemo,
       role: 'recipient',
       phone: '+92 305 6662323',
       city: 'Mirpur Mathelo',
